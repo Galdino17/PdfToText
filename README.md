@@ -1,41 +1,29 @@
-# Extensão PDF to Text
+# PDF to Text Extension
 
-A extensão PDF to Text é uma extensão para o Google Chrome que permite converter arquivos PDF em arquivos de texto (.txt).
+Esta é uma extensão do Chrome que permite converter arquivos PDF em texto selecionável. A extensão é capaz de extrair o texto de arquivos PDF com texto selecionável, mas não converte texto de imagens incorporadas em PDF.
 
 ## Funcionalidades
 
-- Carregar um arquivo PDF local.
-- Converter o PDF em texto.
-- Exportar o texto extraído como um arquivo de texto (.txt).
+- Converte arquivos PDF em texto selecionável.
+- Preserva a formatação do texto original do PDF.
+- Suporta conversão de arquivos PDF com texto selecionável.
 
-## Instalação
+## Limitações
 
-1. Faça o download dos arquivos da extensão ou clone este repositório.
-2. Abra o Google Chrome e acesse `chrome://extensions/`.
-3. Habilite o "Modo do desenvolvedor" no canto superior direito.
-4. Clique em "Carregar sem compactação" e selecione a pasta da extensão.
-5. A extensão será carregada e o ícone da extensão será exibido na barra de ferramentas.
+- Não converte texto de imagens incorporadas em PDF.
+- A extensão requer permissão para acessar as abas ativas e realizar downloads.
 
-## Como Usar
+## Como usar
 
-1. Clique no ícone da extensão na barra de ferramentas do Chrome.
-2. Na janela pop-up, clique no botão "Escolher arquivo" e selecione um arquivo PDF.
-3. Clique no botão "Converter para TXT".
-4. O arquivo de texto convertido será baixado automaticamente com o nome "converted.txt".
+1. Baixe e instale a extensão no seu navegador Chrome.
+2. Abra uma aba com um arquivo PDF.
+3. Se o arquivo PDF contiver texto selecionável, clique no botão da extensão na barra de ferramentas do navegador.
+4. O PDF será convertido em um arquivo de texto selecionável (TXT) e o download será iniciado automaticamente.
 
-## Requisitos
+## Contribuição
 
-- Google Chrome (versão mais recente).
-
-## Bibliotecas Utilizadas
-
-- [PDF.js](https://mozilla.github.io/pdf.js/): Biblioteca JavaScript para trabalhar com arquivos PDF no navegador.
-
-## Contribuindo
-
-Contribuições são bem-vindas! Se você encontrar algum problema, tiver sugestões ou quiser adicionar novos recursos, fique à vontade para abrir uma "issue" ou enviar um "pull request".
+Este projeto é de código aberto e as contribuições são bem-vindas. Sinta-se à vontade para reportar problemas, fornecer sugestões ou enviar solicitações de pull através do repositório do projeto no GitHub.
 
 ## Licença
 
-Este projeto está licenciado sob a Licença MIT. Consulte o arquivo [LICENSE](LICENSE) para obter mais detalhes.
-
+Este projeto está licenciado sob a Licença MIT.
