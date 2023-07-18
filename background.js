@@ -3,18 +3,6 @@ var script = document.createElement('script');
 script.src = 'pdf.js'; // Insira o caminho correto para o arquivo pdf.js
 document.head.appendChild(script);
 
-// // Função para converter PDF em texto
-// function convertPDFToText(pdfData) {
-//   // Usar o pdfjsLib após o carregamento da biblioteca
-//   script.onload = function() {
-//     pdfjsLib.getDocument(pdfData).promise.then(function(pdf) {
-//       // Restante do código para converter o PDF em texto...
-//     }).catch(function(error) {
-//       console.error('Erro ao carregar o PDF:', error);
-//     });
-//   };
-// }
-
 
 function convertPDFToText(pdfData, fileName) {
   pdfjsLib.getDocument(pdfData).promise.then(function(pdf) {
@@ -56,7 +44,6 @@ function convertPDFToText(pdfData, fileName) {
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   if (request.type === 'convertPDFToText') {
-    getActiveTab()
     convertPDFToText(request.pdfData);
   }
 });
