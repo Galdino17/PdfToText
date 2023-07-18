@@ -1,22 +1,9 @@
-function getActiveTab(callback) {
-  chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
-    var activeTab = tabs[0];
-    callback(activeTab);
-  });
-}
 
 document.addEventListener('DOMContentLoaded', function() {
   var pdfFileInput = document.getElementById('pdfFileInput');
   var convertButton = document.getElementById('convertButton');
   var fileName = document.getElementById('fileNameInput');
 
-  getActiveTab(function(tab) {
-    if (tab.url.toLowerCase().endsWith('.pdf')) {
-      // alert(tab.url)
-      // pdfFileInput.value = tab.url;
-      // fileName.value = tab.url + '.txt';
-    }
-  });
 
   pdfFileInput.addEventListener('change', function() {
     var file = pdfFileInput.files[0];
@@ -25,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   convertButton.addEventListener('click', function() {
     var file = pdfFileInput.files[0];
-    alert(pdfFileInput.value)
     if (file) {
       var fileReader = new FileReader();
       fileReader.onload = function() {
